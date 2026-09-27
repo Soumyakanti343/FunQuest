@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="FunQuest - Play Tic Tac Toe, Rock Paper Scissors and Sudoku">
+    <title>FunQuest | Play. Challenge. Win.</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+
+    <div class="background">
+
+        <div class="gradient-orb orb-1"></div>
+
+        <div class="gradient-orb orb-2"></div>
+
+        <div class="gradient-orb orb-3"></div>
+
+        <div class="grid-background"></div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+
+            <!-- Logo -->
+
+            <a href="#" class="logo" onclick="showHome()">
+
+                <div class="logo-icon">
+
+                    <i class="fa-solid fa-gamepad"></i>
+
+                </div>
+
+
+                <div class="logo-text">
+
+                    FUN<span>QUEST</span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- Navigation -->
+
+            <nav class="nav-links">
+
+                <a
+                    href="#"
+                    class="nav-link active"
+                    onclick="showHome()">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Home</span>
+
+                </a>
+
+
+                <a
+                    href="#games"
+                    class="nav-link"
+                    id="games-nav-link">
+
+                    <i class="fa-solid fa-gamepad"></i>
+
+                    <span>Games</span>
+
+                </a>
+
+            </nav>
+
+
+
+            <!-- Online Status -->
+
+            <div class="nav-status">
+
+                <span class="status-dot"></span>
+
+                <span>ONLINE</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             HOME SCREEN
+        ====================================== -->
+
+        <section
+            id="home-screen"
+            class="screen active-screen">
+
+
+            <!-- HERO -->
+
+            <div class="hero">
+
+
+                <div class="hero-badge">
+
+                    <span class="pulse-dot"></span>
+
+                    WELCOME TO GAMEHUB
+
+                </div>
+
+
+
+                <h1 class="hero-title">
+
+                    PLAY.
+
+                    <span>CHALLENGE.</span>
+
+                    WIN.
+
+                </h1>
+
+
+
+                <p class="hero-description">
+
+                    Three classic games. Endless challenges.
+
+                    <br>
+
+                    Pick your game and let the fun begin.
+
+                </p>
+
+
+
+                <button
+                    class="primary-button"
+                    onclick="scrollToGames()">
+
+                    <span>EXPLORE GAMES</span>
+
+                    <i class="fa-solid fa-arrow-down"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================
+                 GAMES SECTION
+            ================================== -->
+
+            <section
+                id="games"
+                class="games-section">
+
+
+                <div class="section-heading">
+
+
+                    <div>
+
+                        <span class="section-label">
+                            CHOOSE YOUR GAME
+                        </span>
+
+
+                        <h2>
+
+                            ENTER THE
+                            <span>ARENA</span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <div class="game-count">
+
+                        <span>03</span>
+
+                        GAMES AVAILABLE
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GAME CARDS -->
+
+                <div class="games-grid">
+
+
+                    <!-- =================================
+                         TIC TAC TOE CARD
+                    ================================== -->
+
+                    <article class="game-card tic-card">
+
+
+                        <div class="card-glow"></div>
+
+
+                        <div class="card-top">
+
+                            <span class="game-number">
+                                01
+                            </span>
+
+
+                            <span class="game-tag">
+                                2 PLAYERS
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="game-icon tic-icon">
+
+                            <span>X</span>
+
+                            <span>O</span>
+
+                        </div>
+
+
+
+                        <h3>
+                            TIC TAC TOE
+                        </h3>
+
+
+                        <p>
+
+                            Outsmart your opponent
+                            and get three in a row.
+
+                        </p>
+
+
+
+                        <div class="card-footer">
+
+
+                            <span>
+
+                                <i class="fa-solid fa-users"></i>
+
+                                LOCAL
+
+                            </span>
+
+
+
+                            <button
+                                class="play-button"
+                                onclick="openGame('tic-tac-toe')">
+
+                                PLAY
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================
+                         ROCK PAPER SCISSORS CARD
+                    ================================== -->
+
+                    <article class="game-card rps-card">
+
+
+                        <div class="card-glow"></div>
+
+
+                        <div class="card-top">
+
+                            <span class="game-number">
+                                02
+                            </span>
+
+
+                            <span class="game-tag">
+                                VS COMPUTER
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="game-icon rps-icon">
+
+                            <i class="fa-solid fa-hand-fist"></i>
+
+                            <i class="fa-solid fa-hand"></i>
+
+                            <i class="fa-solid fa-hand-scissors"></i>
+
+                        </div>
+
+
+
+                        <h3>
+                            ROCK PAPER SCISSORS
+                        </h3>
+
+
+                        <p>
+
+                            Choose your weapon and
+                            defeat the computer.
+
+                        </p>
+
+
+
+                        <div class="card-footer">
+
+
+                            <span>
+
+                                <i class="fa-solid fa-robot"></i>
+
+                                AI OPPONENT
+
+                            </span>
+
+
+
+                            <button
+                                class="play-button"
+                                onclick="openGame('rock-paper-scissors')">
+
+                                PLAY
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================
+                         SUDOKU CARD
+                    ================================== -->
+
+                    <article class="game-card sudoku-card">
+
+
+                        <div class="card-glow"></div>
+
+
+                        <div class="card-top">
+
+                            <span class="game-number">
+                                03
+                            </span>
+
+
+                            <span class="game-tag">
+                                PUZZLE
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="game-icon sudoku-icon">
+
+                            <span>9</span>
+
+                            <span>6</span>
+
+                            <span>3</span>
+
+                            <span>7</span>
+
+                        </div>
+
+
+
+                        <h3>
+                            SUDOKU
+                        </h3>
+
+
+                        <p>
+
+                            Test your logic and complete
+                            the ultimate number puzzle.
+
+                        </p>
+
+
+
+                        <div class="card-footer">
+
+
+                            <span>
+
+                                <i class="fa-solid fa-brain"></i>
+
+                                LOGIC
+
+                            </span>
+
+
+
+                            <button
+                                class="play-button"
+                                onclick="openGame('sudoku')">
+
+                                PLAY
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 STATS
+            ================================== -->
+
+            <section class="stats-section">
+
+
+                <div class="stat">
+
+                    <span class="stat-number">
+                        03
+                    </span>
+
+                    <span class="stat-label">
+                        GAMES
+                    </span>
+
+                </div>
+
+
+
+                <div class="stat-divider"></div>
+
+
+
+                <div class="stat">
+
+                    <span class="stat-number">
+                        ∞
+                    </span>
+
+                    <span class="stat-label">
+                        CHALLENGES
+                    </span>
+
+                </div>
+
+
+
+                <div class="stat-divider"></div>
+
+
+
+                <div class="stat">
+
+                    <span class="stat-number">
+                        100%
+                    </span>
+
+                    <span class="stat-label">
+                        FUN
+                    </span>
+
+                </div>
+
+
+            </section>
+
+        </section>
+
+
+
+        <!-- =========================================
+             TIC TAC TOE SCREEN
+        ========================================== -->
+
+        <section
+            id="tic-tac-toe-screen"
+            class="screen game-screen">
+
+
+            <div class="game-header">
+
+
+                <button
+                    class="back-button"
+                    onclick="showHome()">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    BACK
+
+                </button>
+
+
+
+                <div class="game-title">
+
+                    <span class="mini-label">
+                        GAME 01
+                    </span>
+
+                    <h2>
+
+                        TIC TAC
+                        <span>TOE</span>
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                id="tic-tac-toe-container"
+                class="game-container">
+
+                <!-- Tic Tac Toe generated by JavaScript -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             ROCK PAPER SCISSORS SCREEN
+        ========================================== -->
+
+        <section
+            id="rock-paper-scissors-screen"
+            class="screen game-screen">
+
+
+            <div class="game-header">
+
+
+                <button
+                    class="back-button"
+                    onclick="showHome()">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    BACK
+
+                </button>
+
+
+
+                <div class="game-title">
+
+                    <span class="mini-label">
+                        GAME 02
+                    </span>
+
+                    <h2>
+
+                        ROCK PAPER
+                        <span>SCISSORS</span>
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                id="rock-paper-scissors-container"
+                class="game-container">
+
+                <!-- Rock Paper Scissors generated by JavaScript -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             SUDOKU SCREEN
+        ========================================== -->
+
+        <section
+            id="sudoku-screen"
+            class="screen game-screen">
+
+
+            <div class="game-header">
+
+
+                <button
+                    class="back-button"
+                    onclick="showHome()">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    BACK
+
+                </button>
+
+
+
+                <div class="game-title">
+
+                    <span class="mini-label">
+                        GAME 03
+                    </span>
+
+                    <h2>
+
+                        SUDOKU
+                        <span>MASTER</span>
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                id="sudoku-container"
+                class="game-container">
+
+                <!-- Sudoku generated by JavaScript -->
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+
+        <div class="footer-content">
+
+
+            <div class="footer-logo">
+
+                <i class="fa-solid fa-gamepad"></i>
+
+                FUN<span>QUEST</span>
+
+            </div>
+
+
+
+            <p>
+
+                Built with HTML, CSS & JavaScript
+
+            </p>
+
+
+
+            <div class="footer-right">
+
+                <span>
+
+                    <i class="fa-solid fa-code"></i>
+
+                    VANILLA JS
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="js/app.js"></script>
+    <script src="js/tic-tac-toe.js"></script>
+    <script src="js/rock-paper-scissors.js"></script>
+    <script src="js/sudoku.js"></script>
+</body>
+</html>
+
+
